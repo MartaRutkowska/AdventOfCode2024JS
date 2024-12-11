@@ -19,14 +19,7 @@ function ArrayToDictionary(arr)
 	for(var i = 0; i< arr.length; i++)
 	{
 		var found = dict.find(e => e.Number == arr[i]);
-		if(found != undefined)
-		{
-			found.Occurences ++;
-		}
-		else
-		{
-			dict.push({ "Number": arr[i], "Occurences": 1})
-		}
+		found != undefined ? found.Occurences ++ : dict.push({ "Number": arr[i], "Occurences": 1});
 	}
 	
 	return dict;
@@ -38,7 +31,6 @@ function findDistance(array1, array2)
 	array2.sort();
 	
 	let dist = 0;
-	
 	for(var i = 0; i< array1.length; i++)
 	{
 		dist += Math.abs(array1[i] - array2[i]);
