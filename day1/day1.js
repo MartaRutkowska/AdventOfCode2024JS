@@ -56,7 +56,7 @@ function Similarity(dict1, dict2)
 var locations1 = [];
 var locations2 = [];
 
-var data = ReadFileSync('dayOneInput.txt');
+var data = ReadFileSync('day1Input.txt');
 data = data.split("\r\n");
 
 for(var i = 0; i< data.length; i++)
